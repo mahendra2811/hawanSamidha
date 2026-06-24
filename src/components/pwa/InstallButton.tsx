@@ -26,10 +26,13 @@ export function InstallButton() {
     };
     window.addEventListener("beforeinstallprompt", onPrompt);
     window.addEventListener("appinstalled", onInstalled);
-    if (window.matchMedia("(display-mode: standalone)").matches) setInstalled(true);
+    const id = requestAnimationFrame(() => {
+      if (window.matchMedia("(display-mode: standalone)").matches) setInstalled(true);
+    });
     return () => {
       window.removeEventListener("beforeinstallprompt", onPrompt);
       window.removeEventListener("appinstalled", onInstalled);
+      cancelAnimationFrame(id);
     };
   }, []);
 

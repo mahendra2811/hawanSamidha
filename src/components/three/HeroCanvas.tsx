@@ -16,9 +16,13 @@ export function HeroCanvas() {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const wideEnough = window.innerWidth >= 768;
-    if (!reduce && wideEnough) setEnabled(true);
+    // Defer to the next frame so the canvas never competes with first paint.
+    const id = requestAnimationFrame(() => {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const wideEnough = window.innerWidth >= 768;
+      if (!reduce && wideEnough) setEnabled(true);
+    });
+    return () => cancelAnimationFrame(id);
   }, []);
 
   if (!enabled) return null;
