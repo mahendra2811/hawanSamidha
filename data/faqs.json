@@ -1,0 +1,74 @@
+[
+  {
+    "id": "moq",
+    "scope": "global",
+    "question": {
+      "en": "Do you have a minimum order quantity?",
+      "hi": "क्या न्यूनतम ऑर्डर मात्रा है?"
+    },
+    "answer": {
+      "en": "Yes — we supply to wholesale buyers in bulk tiers. Minimum quantities vary by product and packaging; share your requirement in an enquiry and we'll confirm.",
+      "hi": "हाँ — हम थोक खरीदारों को बल्क टियर में आपूर्ति करते हैं। न्यूनतम मात्रा उत्पाद व पैकेजिंग के अनुसार बदलती है; पूछताछ में अपनी आवश्यकता बताएँ, हम पुष्टि करेंगे।"
+    }
+  },
+  {
+    "id": "pricing",
+    "scope": "global",
+    "question": {
+      "en": "How is pricing shared?",
+      "hi": "मूल्य कैसे बताया जाता है?"
+    },
+    "answer": {
+      "en": "Wholesale prices are confirmed on enquiry, since they depend on quantity, packaging and delivery location. Add products to your cart and submit an enquiry, or reach us on WhatsApp / phone.",
+      "hi": "थोक मूल्य पूछताछ पर तय होते हैं, क्योंकि वे मात्रा, पैकेजिंग और डिलीवरी स्थान पर निर्भर करते हैं। उत्पाद कार्ट में जोड़कर पूछताछ भेजें, या व्हाट्सऐप / फोन पर संपर्क करें।"
+    }
+  },
+  {
+    "id": "shipping",
+    "scope": "global",
+    "question": {
+      "en": "Do you ship across India?",
+      "hi": "क्या आप पूरे भारत में भेजते हैं?"
+    },
+    "answer": {
+      "en": "Yes. We ship from Jodhpur, Rajasthan to buyers across India. Delivery timelines and freight depend on the destination and order size.",
+      "hi": "हाँ। हम जोधपुर, राजस्थान से पूरे भारत के खरीदारों को भेजते हैं। डिलीवरी समय व भाड़ा गंतव्य और ऑर्डर के आकार पर निर्भर करते हैं।"
+    }
+  },
+  {
+    "id": "white-label",
+    "scope": "global",
+    "question": {
+      "en": "Can products be supplied unbranded / white-labelled?",
+      "hi": "क्या उत्पाद बिना ब्रांड / व्हाइट-लेबल आपूर्ति किए जा सकते हैं?"
+    },
+    "answer": {
+      "en": "Yes, many products can be supplied unbranded for resellers and agents. Mention this in your enquiry.",
+      "hi": "हाँ, कई उत्पाद रीसेलर व एजेंट के लिए बिना ब्रांड आपूर्ति किए जा सकते हैं। पूछताछ में इसका उल्लेख करें।"
+    }
+  },
+  {
+    "id": "samidha-wood",
+    "scope": "havan-samidha",
+    "question": {
+      "en": "Which wood is the havan samidha made from?",
+      "hi": "हवन समिधा किस लकड़ी से बनी होती है?"
+    },
+    "answer": {
+      "en": "Our havan samidha is made from seasoned mango wood (aam ki lakdi), traditionally preferred for yagna and havan.",
+      "hi": "हमारी हवन समिधा परिपक्व आम की लकड़ी से बनी होती है, जो यज्ञ व हवन के लिए पारंपरिक रूप से पसंद की जाती है।"
+    }
+  },
+  {
+    "id": "briquette-use",
+    "scope": "briquettes",
+    "question": {
+      "en": "What are biomass briquettes used for?",
+      "hi": "बायोमास ब्रिकेट्स का उपयोग किसलिए होता है?"
+    },
+    "answer": {
+      "en": "Biomass (white coal) briquettes are a clean solid fuel for boilers and industrial heating, made from compressed sawdust and agro-waste.",
+      "hi": "बायोमास (सफेद कोयला) ब्रिकेट्स बॉयलर व औद्योगिक हीटिंग के लिए स्वच्छ ठोस ईंधन हैं, जो दबाए गए बुरादे और कृषि-अपशिष्ट से बनते हैं।"
+    }
+  }
+]

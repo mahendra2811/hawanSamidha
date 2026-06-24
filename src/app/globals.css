@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
+/* ───────────────────────── Agni Gold theme ─────────────────────────
+   Dark premium, gradient-forward. Tokens drive every color / font;
+   never hardcode hex in components — use these utilities & vars. */
+@theme {
+  --color-base: #150f0c; /* ember black page bg */
+  --color-surface: #211813; /* cards */
+  --color-elevated: #2c211a; /* raised / drawer */
+  --color-ember: #7a1f1f;
+  --color-saffron: #ff8c32;
+  --color-gold: #f5c84c;
+  --color-gold-soft: #e9c46a;
+  --color-text: #f7ecdd;
+  --color-text-secondary: #c9b8a4;
+  --color-text-muted: #8a7a68;
+  --color-border: rgba(245, 200, 76, 0.12);
+  --color-success: #4fa46a;
+  --color-danger: #d9534f;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-jakarta), system-ui, sans-serif;
+  --font-hi: var(--font-mukta), "Noto Sans Devanagari", sans-serif;
+
+  --radius: 14px; /* `rounded` => 14px; use rounded-2xl/3xl for larger */
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --grad-gold: linear-gradient(135deg, var(--color-saffron), var(--color-gold));
+  --grad-hero: linear-gradient(160deg, #150f0c 0%, #3a1410 45%, #7a1f1f 75%, #ff8c32 100%);
+  --grad-glow: radial-gradient(circle at center, rgba(245, 200, 76, 0.35), transparent 70%);
+  --grad-conic: conic-gradient(from 0deg, #7a1f1f, #ff8c32, #f5c84c, #7a1f1f);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-base);
+  color: var(--color-text);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:lang(hi) {
+  font-family: var(--font-hi);
+}
+
+/* Visible focus on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced motion: kill drift, particles, non-essential transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ───────────────────────── Gradient utilities ───────────────────────── */
+@utility grad-gold {
+  background-image: var(--grad-gold);
+}
+@utility grad-hero {
+  background-image: var(--grad-hero);
+}
+@utility grad-glow {
+  background-image: var(--grad-glow);
+}
+@utility grad-conic {
+  background-image: var(--grad-conic);
+}
+
+/* Gold gradient text (display headings / accents). */
+@utility text-gradient {
+  background-image: var(--grad-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Faint hairline border in the gold token. */
+@utility border-hairline {
+  border: 1px solid var(--color-border);
 }

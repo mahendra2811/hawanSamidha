@@ -1,0 +1,175 @@
+{
+  "Common": {
+    "brand": "Ammedi",
+    "loading": "Loading…",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "close": "Close",
+    "menu": "Menu",
+    "skipToContent": "Skip to content"
+  },
+  "Nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "blog": "Blog",
+    "install": "Install app",
+    "checkout": "Enquiry"
+  },
+  "Home": {
+    "heroTitle": "Sacred essentials, crafted for every ritual",
+    "heroSubtitle": "Wholesale havan samagri, samidha & puja products — made in Jodhpur since 2002.",
+    "heroCtaProducts": "Explore products",
+    "heroCtaEnquiry": "Get a wholesale quote",
+    "featuredTitle": "Featured products",
+    "featuredSubtitle": "Our most-ordered ritual essentials.",
+    "channelsTitle": "Find us across channels",
+    "channelsSubtitle": "Buy or enquire wherever you already shop.",
+    "faqTitle": "Frequently asked questions"
+  },
+  "Trust": {
+    "title": "Trusted by buyers across India",
+    "yearsLabel": "Years on IndiaMART",
+    "ratingLabel": "Rating ({reviews} reviews)",
+    "sealLabel": "TrustSEAL Verified",
+    "since": "Manufacturer since {year}"
+  },
+  "Products": {
+    "title": "Products",
+    "subtitle": "Bulk-tier havan & puja products, made to order.",
+    "all": "All",
+    "empty": "No products in this category yet.",
+    "fromLabel": "From",
+    "priceOnEnquiry": "Price on enquiry",
+    "viewProduct": "View",
+    "resultsCount": "{count, plural, =0 {No products} =1 {1 product} other {# products}}"
+  },
+  "Product": {
+    "addToCart": "Add to cart",
+    "added": "Added to cart",
+    "selectTier": "Select packaging tier",
+    "quantity": "Quantity",
+    "ingredients": "Ingredients",
+    "ingredientsIntro": "What goes into this product.",
+    "description": "Description",
+    "specifications": "Specifications",
+    "hsn": "HSN Code",
+    "category": "Category",
+    "packaging": "Packaging",
+    "minOrder": "Min. order",
+    "priceOnEnquiry": "Price on enquiry",
+    "enquireTitle": "Enquire about this product",
+    "relatedTitle": "More from this category",
+    "faqTitle": "Product FAQs",
+    "breadcrumbHome": "Home",
+    "breadcrumbProducts": "Products"
+  },
+  "Cart": {
+    "title": "Your enquiry cart",
+    "open": "Open cart",
+    "empty": "Your cart is empty.",
+    "emptyHint": "Add products to start a wholesale enquiry.",
+    "item": "item",
+    "items": "items",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "priceOnEnquiry": "Price on enquiry",
+    "totalQty": "Total quantity",
+    "proceed": "Proceed to enquiry",
+    "continue": "Continue browsing"
+  },
+  "Checkout": {
+    "title": "Wholesale enquiry",
+    "subtitle": "Share your details and we'll confirm pricing & availability by phone.",
+    "summaryTitle": "Enquiry summary",
+    "emptyCart": "Your cart is empty.",
+    "emptyCartHint": "Add products before submitting an enquiry.",
+    "browseProducts": "Browse products"
+  },
+  "Enquiry": {
+    "name": "Your name",
+    "namePlaceholder": "e.g. Ramesh Traders",
+    "mobile": "Mobile number",
+    "mobilePlaceholder": "10-digit mobile",
+    "email": "Email (optional)",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message (optional)",
+    "messagePlaceholder": "Quantities, delivery city, any specifics…",
+    "submit": "Send enquiry",
+    "submitting": "Sending…",
+    "or": "or reach us directly",
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "emailUs": "Email",
+    "successTitle": "Enquiry sent",
+    "successBody": "Thank you. We'll get back to you shortly to confirm your order.",
+    "disabledTitle": "Email enquiry is currently unavailable",
+    "disabledBody": "Please reach us on WhatsApp or by phone and we'll help right away.",
+    "errorTitle": "Something went wrong",
+    "errorBody": "Please try again, or contact us on WhatsApp / phone.",
+    "errors": {
+      "nameRequired": "Please enter your name.",
+      "mobileRequired": "Please enter your mobile number.",
+      "mobileInvalid": "Enter a valid 10-digit Indian mobile number.",
+      "emailInvalid": "Enter a valid email address."
+    }
+  },
+  "Channels": {
+    "indiamart": "IndiaMART",
+    "flipkart": "Flipkart",
+    "facebook": "Facebook",
+    "website": "Website",
+    "visit": "Visit {channel}"
+  },
+  "About": {
+    "title": "About Ganga Agro Industries",
+    "lead": "Manufacturer of havan & puja essentials from Jodhpur, Rajasthan.",
+    "storyTitle": "Our story",
+    "story": "Established in 2002 as a proprietorship in Jodhpur, Ganga Agro Industries (house brand Ammedi) manufactures hawan samagri, mango-wood samidha, pooja items, incense & dhoop, sandalwood powder and biomass briquettes. We supply wholesale buyers across India with consistent quality and dependable delivery.",
+    "trustTitle": "Why buyers trust us",
+    "channelsTitle": "Where to find us"
+  },
+  "Blog": {
+    "title": "Journal",
+    "subtitle": "Guides and notes on rituals, ingredients and sourcing.",
+    "readMore": "Read more",
+    "empty": "No posts yet. Check back soon.",
+    "backToBlog": "Back to journal"
+  },
+  "Install": {
+    "title": "Install the Ammedi app",
+    "subtitle": "Add Ammedi to your home screen for fast, offline-friendly browsing.",
+    "installButton": "Install app",
+    "installed": "App installed",
+    "unavailable": "Installation isn't available in this browser right now.",
+    "iosTitle": "On iPhone / iPad (Safari)",
+    "iosStep1": "Tap the Share button.",
+    "iosStep2": "Choose “Add to Home Screen”.",
+    "iosStep3": "Tap “Add”."
+  },
+  "Qr": {
+    "ingredientsTitle": "Ingredients",
+    "channelsTitle": "Available on",
+    "enquiryTitle": "Wholesale enquiry",
+    "enquiryBody": "Buying in bulk? Reach us directly."
+  },
+  "Legal": {
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Service",
+    "placeholderNote": "This is placeholder copy and will be replaced with the final policy."
+  },
+  "Footer": {
+    "tagline": "Havan & puja essentials, made in Jodhpur.",
+    "navTitle": "Explore",
+    "channelsTitle": "Channels",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "hi": "हिन्दी"
+  }
+}
