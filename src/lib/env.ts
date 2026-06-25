@@ -24,7 +24,9 @@ export const env = {
   // Contact / enquiry
   phone: clean(process.env.NEXT_PUBLIC_PHONE),
   whatsapp: clean(process.env.NEXT_PUBLIC_WHATSAPP),
-  enquiryEmail: clean(process.env.ENQUIRY_TO_EMAIL),
+  // Public (shown as a mailto in the footer + enquiry actions) — must be
+  // NEXT_PUBLIC so server and client render the same thing (no hydration drift).
+  enquiryEmail: clean(process.env.NEXT_PUBLIC_ENQUIRY_EMAIL),
   resendApiKey: clean(process.env.RESEND_API_KEY),
   // Web3Forms is submitted from the browser (free plan blocks server IPs), so
   // the key is NEXT_PUBLIC. It is a public submission key by design.
