@@ -2,7 +2,7 @@
 
 /* ───────────────────────── Agni Gold theme ─────────────────────────
    Light by default; dark under [data-theme="dark"]. Color tokens are backed
-   by CSS vars (--c-*) that flip per theme, so every bg-*/text-* utility
+   by CSS vars (--c-…) that flip per theme, so every color utility
    re-themes automatically — components never hardcode hex.
    Two constant tokens never flip:
      on-gold  → dark ink for text on gold gradients

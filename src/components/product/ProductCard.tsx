@@ -19,17 +19,19 @@ export function ProductCard({ product, locale }: { product: Product; locale: str
     : null;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-gold/30">
+    <article className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-colors hover:border-gold/30">
       {/* Image + details link to the PDP. The cart control below is outside this
           link, so tapping it never navigates. */}
       <Link href={`/products/${product.slug}`} className="flex flex-1 flex-col">
-        <div className="relative aspect-square overflow-hidden bg-white">
+        {/* Fixed image box per breakpoint (mobile / tablet / desktop). object-cover
+            zooms the image to fill the box so every product image is the same size. */}
+        <div className="relative h-40 overflow-hidden bg-elevated sm:h-48 lg:h-56">
           <Image
             src={product.heroImage}
             alt={name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
           {product.badges.length > 0 && (
             <div className="absolute left-2 top-2 flex flex-wrap gap-1">
@@ -40,19 +42,23 @@ export function ProductCard({ product, locale }: { product: Product; locale: str
           )}
         </div>
 
-        <div className="flex flex-1 flex-col gap-1.5 p-4">
-          <p className="text-xs uppercase tracking-wide text-text-muted">
+        {/* Reserved heights keep every card identical regardless of name length
+            or whether a price is shown. */}
+        <div className="flex flex-col gap-1 p-4">
+          <p className="h-4 truncate text-xs uppercase tracking-wide text-text-muted">
             {categoryLabel(product.category, locale)}
           </p>
-          <h3 className="line-clamp-2 font-medium leading-snug text-text transition-colors group-hover:text-gold">
+          <h3 className="line-clamp-2 h-[2.75rem] font-medium leading-snug text-text transition-colors group-hover:text-gold">
             {name}
           </h3>
-          {estLabel && (
-            <p className="mt-auto pt-2 text-sm">
-              <span className="font-semibold text-gold">{estLabel}</span>
-              <span className="ml-1 text-xs text-text-muted">· {pick(tier.label, locale)}</span>
-            </p>
-          )}
+          <p className="h-5 text-sm">
+            {estLabel && (
+              <>
+                <span className="font-semibold text-gold">{estLabel}</span>
+                <span className="ml-1 text-xs text-text-muted">· {pick(tier.label, locale)}</span>
+              </>
+            )}
+          </p>
         </div>
       </Link>
 
