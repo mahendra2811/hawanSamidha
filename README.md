@@ -44,7 +44,8 @@ Copy `.env.example` → `.env.local`. Missing values simply disable their featur
 |----------|---------|
 | `NEXT_PUBLIC_SITE_NAME` / `NEXT_PUBLIC_SITE_URL` | Brand name / canonical URL |
 | `NEXT_PUBLIC_PHONE` / `NEXT_PUBLIC_WHATSAPP` | Call / WhatsApp buttons (default to the real Ganga Agro number) |
-| `ENQUIRY_TO_EMAIL` / `RESEND_API_KEY` | Email enquiries via Resend (off until both set) |
+| `WEB3FORMS_ACCESS_KEY` | Email enquiries via [Web3Forms](https://web3forms.com) (active; off until set) — no domain setup needed |
+| `ENQUIRY_TO_EMAIL` / `RESEND_API_KEY` / `RESEND_FROM` | Resend (alternative, commented out in `api/enquiry/route.ts`) |
 | `NEXT_PUBLIC_INDIAMART_URL` / `_FLIPKART_URL` / `_FACEBOOK_URL` | Channel links |
 | `NEXT_PUBLIC_GA_ID` / `NEXT_PUBLIC_SEARCH_CONSOLE_ID` | Analytics / verification (render only when set) |
 | `DATABASE_URL` / `SENTRY_DSN` | Dormant — Phase 2 |
