@@ -49,8 +49,8 @@
   --grad-gold: linear-gradient(135deg, #f0851f, #f2b23c);
   --grad-glow: radial-gradient(circle at center, rgba(216, 138, 26, 0.22), transparent 70%);
   --grad-conic: conic-gradient(from 0deg, #7a1f1f, #ff8c32, #f5c84c, #7a1f1f);
-  /* Hero stays a dramatic dark band in both themes. */
-  --grad-hero: linear-gradient(160deg, #150f0c 0%, #3a1410 45%, #7a1f1f 75%, #ff8c32 100%);
+  /* Warm, light hero in light mode (dark text reads on it). */
+  --grad-hero: linear-gradient(160deg, #fffaf2 0%, #fbecd2 42%, #f6d595 74%, #eba94c 100%);
 }
 
 /* Dark theme */
@@ -70,6 +70,8 @@
 
   --grad-gold: linear-gradient(135deg, #ff8c32, #f5c84c);
   --grad-glow: radial-gradient(circle at center, rgba(245, 200, 76, 0.35), transparent 70%);
+  /* Dramatic dark ember band in dark mode. */
+  --grad-hero: linear-gradient(160deg, #150f0c 0%, #3a1410 45%, #7a1f1f 75%, #ff8c32 100%);
 }
 
 html {

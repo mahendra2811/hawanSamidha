@@ -44,25 +44,25 @@ export function ProductCard({ product, locale }: { product: Product; locale: str
 
         {/* Reserved heights keep every card identical regardless of name length
             or whether a price is shown. */}
-        <div className="flex flex-col gap-1 p-4">
-          <p className="h-4 truncate text-xs uppercase tracking-wide text-text-muted">
+        <div className="flex flex-col gap-0.5 p-3 sm:p-4">
+          <p className="h-3.5 truncate text-[10px] uppercase tracking-wide text-text-muted sm:text-xs">
             {categoryLabel(product.category, locale)}
           </p>
-          <h3 className="line-clamp-2 h-[2.75rem] font-medium leading-snug text-text transition-colors group-hover:text-gold">
+          <h3 className="line-clamp-2 h-9 text-sm font-medium leading-snug text-text transition-colors group-hover:text-gold">
             {name}
           </h3>
-          <p className="h-5 text-sm">
+          <p className="h-4 text-xs">
             {estLabel && (
               <>
                 <span className="font-semibold text-gold">{estLabel}</span>
-                <span className="ml-1 text-xs text-text-muted">· {pick(tier.label, locale)}</span>
+                <span className="ml-1 text-[10px] text-text-muted">· {pick(tier.label, locale)}</span>
               </>
             )}
           </p>
         </div>
       </Link>
 
-      <div className="p-4 pt-0">
+      <div className="p-3 pt-0 sm:p-4 sm:pt-0">
         <CardCartControl product={product} />
       </div>
     </article>

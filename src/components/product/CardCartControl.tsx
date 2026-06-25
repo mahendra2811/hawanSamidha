@@ -37,16 +37,26 @@ export function CardCartControl({ product }: { product: Product }) {
 
   if (qty === 0) {
     return (
-      <button type="button" onClick={addOne} className={buttonClasses("primary", "md", "w-full")}>
-        <ShoppingBag size={16} aria-hidden />
-        {t("addToCart")}
+      <button
+        type="button"
+        onClick={addOne}
+        className={buttonClasses(
+          "primary",
+          "sm",
+          "w-full whitespace-nowrap gap-1.5 px-2 text-xs sm:text-sm",
+        )}
+      >
+        <ShoppingBag size={14} aria-hidden />
+        {/* Short label on mobile, full label from sm up. */}
+        <span className="sm:hidden">{t("add")}</span>
+        <span className="hidden sm:inline">{t("addToCart")}</span>
       </button>
     );
   }
 
   return (
     <div
-      className="grad-gold flex h-11 w-full items-center justify-between rounded px-1 text-on-gold"
+      className="grad-gold flex h-9 w-full items-center justify-between rounded px-0.5 text-on-gold"
       role="group"
       aria-label={t("quantity")}
     >
@@ -54,20 +64,20 @@ export function CardCartControl({ product }: { product: Product }) {
         type="button"
         onClick={() => (qty <= 1 ? remove(product.slug, tier.id) : setQty(product.slug, tier.id, qty - 1))}
         aria-label="Decrease quantity"
-        className="grid h-9 w-9 place-items-center rounded hover:bg-black/10"
+        className="grid h-8 w-8 place-items-center rounded hover:bg-black/10"
       >
-        <Minus size={18} aria-hidden />
+        <Minus size={16} aria-hidden />
       </button>
-      <span className="min-w-8 text-center font-semibold tabular-nums" aria-live="polite">
+      <span className="min-w-6 text-center text-sm font-semibold tabular-nums" aria-live="polite">
         {qty}
       </span>
       <button
         type="button"
         onClick={addOne}
         aria-label="Increase quantity"
-        className="grid h-9 w-9 place-items-center rounded hover:bg-black/10"
+        className="grid h-8 w-8 place-items-center rounded hover:bg-black/10"
       >
-        <Plus size={18} aria-hidden />
+        <Plus size={16} aria-hidden />
       </button>
     </div>
   );

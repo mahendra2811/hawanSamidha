@@ -65,6 +65,7 @@
   },
   "Product": {
     "addToCart": "Add to cart",
+    "add": "Add",
     "added": "Added to cart",
     "selectTier": "Select packaging tier",
     "quantity": "Quantity",

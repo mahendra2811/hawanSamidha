@@ -16,7 +16,15 @@ function makeRng(seed: number) {
 }
 
 /** Drifting ember/diya sparks in Agni-Gold. */
-export function Particles({ count = 350 }: { count?: number }) {
+export function Particles({
+  count = 350,
+  color = "#F5C84C",
+  additive = true,
+}: {
+  count?: number;
+  color?: string;
+  additive?: boolean;
+}) {
   const ref = useRef<THREE.Points>(null);
 
   const positions = useMemo(() => {
@@ -49,12 +57,12 @@ export function Particles({ count = 350 }: { count?: number }) {
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
-        color="#F5C84C"
-        size={0.055}
+        color={color}
+        size={additive ? 0.055 : 0.07}
         sizeAttenuation
         transparent
-        opacity={0.85}
-        blending={THREE.AdditiveBlending}
+        opacity={additive ? 0.85 : 0.55}
+        blending={additive ? THREE.AdditiveBlending : THREE.NormalBlending}
         depthWrite={false}
       />
     </points>
