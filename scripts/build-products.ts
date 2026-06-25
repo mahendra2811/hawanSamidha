@@ -455,6 +455,22 @@ function buildBadges(p: SrcProduct, specs: Record<string, string>) {
 
 // ── Main ─────────────────────────────────────────────────────────────────────
 function main() {
+  // The scraped source catalogue lives outside the repo (../extracted), so it is
+  // NOT present on CI / Vercel. data/products.json + public/products/ are the
+  // committed build artifacts. When the source is missing, keep them as-is.
+  if (!fs.existsSync(CATALOG)) {
+    if (fs.existsSync(OUT_JSON)) {
+      console.log(
+        `⚠ Source catalogue not found at ${CATALOG} — keeping committed data/products.json ` +
+          `(expected on CI/Vercel; run locally with ../extracted present to regenerate).`,
+      );
+      return;
+    }
+    throw new Error(
+      `Source catalogue not found at ${CATALOG} and no data/products.json to fall back to.`,
+    );
+  }
+
   const catalog = JSON.parse(fs.readFileSync(CATALOG, "utf8")) as { products: SrcProduct[] };
   const src = catalog.products ?? [];
 
