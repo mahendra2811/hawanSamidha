@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { X } from "lucide-react";
+import { X, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 type DrawerProps = {
@@ -66,7 +66,8 @@ export function Drawer({ open, onClose, title, children, footer }: DrawerProps) 
   if (!open || typeof document === "undefined") return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-50" aria-hidden={false}>
+    // z-40 sits below the bottom nav (z-50) so the nav stays visible & tappable.
+    <div className="fixed inset-0 z-40" aria-hidden={false}>
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
@@ -78,12 +79,22 @@ export function Drawer({ open, onClose, title, children, footer }: DrawerProps) 
         aria-modal="true"
         aria-label={title}
         className={cn(
-          "absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-surface shadow-2xl",
+          // On mobile the panel stops 4rem above the bottom so the fixed bottom
+          // nav is never covered; full height from md up.
+          "absolute right-0 top-0 bottom-16 flex w-full max-w-md flex-col bg-surface shadow-2xl md:bottom-0",
           "border-l border-border",
         )}
       >
-        <header className="flex items-center justify-between border-b border-border px-5 py-4">
-          <h2 className="font-display text-lg text-text">{title}</h2>
+        <header className="flex items-center gap-2 border-b border-border px-3 py-3">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Back"
+            className="grid h-9 w-9 place-items-center rounded text-text-secondary transition-colors hover:text-gold"
+          >
+            <ArrowLeft size={20} aria-hidden />
+          </button>
+          <h2 className="flex-1 font-display text-lg text-text">{title}</h2>
           <button
             type="button"
             onClick={onClose}

@@ -9,19 +9,32 @@ import { useUi } from "@/store/ui";
 import { MoreSheet } from "./MoreSheet";
 import { cn } from "@/lib/cn";
 
-/** Fixed mobile bottom navigation: Home · Products · Cart · More. */
+/**
+ * Fixed mobile bottom navigation: Home · Products · Cart · More.
+ * Stays above the cart drawer / More sheet (z-50) so it's always an easy way
+ * back — tapping any tab dismisses an open drawer/sheet, and Cart/More toggle.
+ */
 export function BottomNav() {
   const tn = useTranslations("Nav");
   const tc = useTranslations("Cart");
   const tm = useTranslations("Common");
   const pathname = usePathname();
+  const cartOpen = useUi((s) => s.cartOpen);
   const openCart = useUi((s) => s.openCart);
+  const closeCart = useUi((s) => s.closeCart);
   const count = useCart(selectTotalQty);
   const hydrated = useCart((s) => s.hasHydrated);
   const [moreOpen, setMoreOpen] = useState(false);
 
-  const isHome = pathname === "/";
-  const isProducts = pathname.startsWith("/products");
+  const overlayOpen = cartOpen || moreOpen;
+  const homeActive = pathname === "/" && !overlayOpen;
+  const productsActive = pathname.startsWith("/products") && !overlayOpen;
+
+  // Dismiss any open overlay (used when navigating away via a tab).
+  function dismiss() {
+    closeCart();
+    setMoreOpen(false);
+  }
 
   const itemCls = (active: boolean) =>
     cn(
@@ -33,11 +46,16 @@ export function BottomNav() {
     <>
       <nav
         aria-label="Bottom"
-        className="fixed inset-x-0 bottom-0 z-30 border-t border-border bg-base/95 backdrop-blur md:hidden"
+        className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-base/95 backdrop-blur md:hidden"
       >
         <ul className="flex items-stretch">
           <li className="flex flex-1">
-            <Link href="/" aria-current={isHome ? "page" : undefined} className={itemCls(isHome)}>
+            <Link
+              href="/"
+              onClick={dismiss}
+              aria-current={homeActive ? "page" : undefined}
+              className={itemCls(homeActive)}
+            >
               <Home size={22} aria-hidden />
               {tn("home")}
             </Link>
@@ -45,15 +63,26 @@ export function BottomNav() {
           <li className="flex flex-1">
             <Link
               href="/products"
-              aria-current={isProducts ? "page" : undefined}
-              className={itemCls(isProducts)}
+              onClick={dismiss}
+              aria-current={productsActive ? "page" : undefined}
+              className={itemCls(productsActive)}
             >
               <LayoutGrid size={22} aria-hidden />
               {tn("products")}
             </Link>
           </li>
           <li className="flex flex-1">
-            <button type="button" onClick={openCart} className={itemCls(false)} aria-label={tc("open")}>
+            <button
+              type="button"
+              onClick={() => {
+                setMoreOpen(false);
+                if (cartOpen) closeCart();
+                else openCart();
+              }}
+              className={itemCls(cartOpen)}
+              aria-label={tc("open")}
+              aria-pressed={cartOpen}
+            >
               <span className="relative">
                 <ShoppingCart size={22} aria-hidden />
                 {hydrated && count > 0 && (
@@ -68,7 +97,10 @@ export function BottomNav() {
           <li className="flex flex-1">
             <button
               type="button"
-              onClick={() => setMoreOpen(true)}
+              onClick={() => {
+                closeCart();
+                setMoreOpen((v) => !v);
+              }}
               className={itemCls(moreOpen)}
               aria-haspopup="dialog"
               aria-expanded={moreOpen}
