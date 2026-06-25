@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import { enquirySchema } from "@/lib/enquiry-schema";
 
-// Resend is left available for later but is no longer used — see the commented
-// implementation at the bottom of this file. We use Web3Forms now: no domain
-// verification, just one access key (https://web3forms.com → create access key).
-
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-
+/**
+ * NOTE: Web3Forms' free plan blocks server-side submissions (it only accepts
+ * requests from the browser). So the checkout form posts to Web3Forms DIRECTLY
+ * (see src/components/cart/EnquiryForm.tsx) and this route is NOT used in that
+ * path. It remains as a server-side fallback for Resend (commented out below)
+ * or a future Web3Forms Pro plan. With nothing configured it returns a graceful
+ * "email-disabled" so the UI points the user to WhatsApp / Call.
+ */
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
   const parsed = enquirySchema.safeParse(body);
@@ -14,67 +16,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, reason: "invalid" }, { status: 400 });
   }
 
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY?.trim();
-
-  // Graceful: not configured -> client falls back to WhatsApp / Call.
-  if (!accessKey) {
-    return NextResponse.json({ ok: false, reason: "email-disabled" });
-  }
-
-  const d = parsed.data;
-
-  const itemsText =
-    d.items.length > 0
-      ? d.items.map((i) => `• ${i.name} — ${i.tier} × ${i.qty}`).join("\n")
-      : "(No items attached.)";
-
-  // Readable summary + structured fields (Web3Forms renders both in the email).
-  const summary = [
-    "New wholesale enquiry — Ammedi",
-    "",
-    `Name:   ${d.name}`,
-    `Mobile: ${d.mobile}`,
-    d.email ? `Email:  ${d.email}` : null,
-    d.message ? `Message: ${d.message}` : null,
-    "",
-    "Cart:",
-    itemsText,
-  ]
-    .filter((l) => l !== null)
-    .join("\n");
-
-  const payload: Record<string, unknown> = {
-    access_key: accessKey,
-    subject: `Wholesale enquiry — ${d.name} (${d.mobile})`,
-    from_name: "Ammedi Website",
-    // Structured fields:
-    name: d.name,
-    mobile: d.mobile,
-    customer_email: d.email || "—",
-    note: d.message || "—",
-    cart: itemsText,
-    // Full readable summary as the email body:
-    message: summary,
-    // Reply straight to the buyer when they gave an email:
-    ...(d.email ? { replyto: d.email } : {}),
-    // Honeypot (must stay empty for genuine submissions):
-    botcheck: "",
-  };
-
-  try {
-    const res = await fetch(WEB3FORMS_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
-    });
-    const data = (await res.json().catch(() => ({ success: false }))) as { success?: boolean };
-    if (!res.ok || !data.success) {
-      return NextResponse.json({ ok: false, reason: "send-failed" }, { status: 502 });
-    }
-    return NextResponse.json({ ok: true, provider: "web3forms" });
-  } catch {
-    return NextResponse.json({ ok: false, reason: "send-failed" }, { status: 502 });
-  }
+  // No server-side email provider wired up (Resend is commented out).
+  return NextResponse.json({ ok: false, reason: "email-disabled" });
 }
 
 /* ─────────────────────────────────────────────────────────────────────────

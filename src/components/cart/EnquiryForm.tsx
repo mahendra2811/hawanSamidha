@@ -15,10 +15,13 @@ import { Button } from "@/components/ui/Button";
 import { EnquiryActions } from "./EnquiryActions";
 import { buildCartEnquiry } from "@/lib/enquiry";
 import { pick } from "@/lib/i18n";
+import { env } from "@/lib/env";
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 type Status = "idle" | "submitting" | "success" | "disabled" | "error";
 
-export function EnquiryForm() {
+export function EnquiryForm({ onSubmitted }: { onSubmitted?: () => void } = {}) {
   const t = useTranslations("Enquiry");
   const locale = useLocale();
   const lines = useCart((s) => s.lines);
@@ -69,14 +72,68 @@ export function EnquiryForm() {
     setStatus("submitting");
     // Remember the buyer's details on-device for next time.
     profile.save({ name: values.name, mobile: values.mobile, email: values.email ?? "" });
-    const items = lines.map((l) => ({
-      slug: l.slug,
-      tierId: l.tierId,
-      name: pick(l.name, locale),
-      tier: pick(l.tierLabel, locale),
-      qty: l.qty,
-    }));
+
+    // Tabular cart: one row per line so it renders cleanly in any email client.
+    // (Email clients collapse whitespace, so columns are separated by " | "
+    //  rather than space-padding.)
+    const totalQty = lines.reduce((n, l) => n + l.qty, 0);
+    const tableRows = lines.map((l) => {
+      const remark = [pick(l.tierLabel, locale), pick(l.packaging, locale)]
+        .filter(Boolean)
+        .join(", ");
+      return `${l.code || l.slug} | ${pick(l.name, locale)} | ${l.qty} | ${remark}`;
+    });
+    const itemsTable =
+      lines.length > 0
+        ? ["Code | Product | Qty | Remark", ...tableRows].join("\n")
+        : "(No items attached.)";
+
     try {
+      // Web3Forms (free plan) must be submitted from the browser, so we POST
+      // directly here. The access key is a public submission key by design.
+      if (env.web3formsKey) {
+        const message = [
+          `Wholesale enquiry — ${lines.length} product(s), ${totalQty} unit(s) total`,
+          "",
+          itemsTable,
+        ].join("\n");
+
+        const res = await fetch(WEB3FORMS_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: env.web3formsKey,
+            subject: `Wholesale enquiry — ${values.name} (${values.mobile})`,
+            from_name: "Ammedi Website",
+            // Capitalised keys become the row labels in the Web3Forms email table.
+            Name: values.name,
+            Mobile: values.mobile,
+            ...(values.email ? { Email: values.email } : {}),
+            ...(values.message ? { Note: values.message } : {}),
+            message,
+            ...(values.email ? { replyto: values.email } : {}),
+            botcheck: "",
+          }),
+        });
+        const data = (await res.json().catch(() => ({ success: false }))) as { success?: boolean };
+        if (data.success) {
+          setStatus("success");
+          clear();
+          onSubmitted?.();
+        } else {
+          setStatus("error");
+        }
+        return;
+      }
+
+      // Fallback: server route (Resend if configured, else graceful disabled).
+      const items = lines.map((l) => ({
+        slug: l.slug,
+        tierId: l.tierId,
+        name: pick(l.name, locale),
+        tier: pick(l.tierLabel, locale),
+        qty: l.qty,
+      }));
       const res = await fetch("/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -86,6 +143,7 @@ export function EnquiryForm() {
       if (data.ok) {
         setStatus("success");
         clear();
+        onSubmitted?.();
       } else if (data.reason === "email-disabled") {
         setStatus("disabled");
       } else {

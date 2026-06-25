@@ -28,6 +28,7 @@ export function ProductBuyBox({ product }: { product: Product }) {
   function onAdd() {
     add({
       slug: product.slug,
+      code: product.code,
       tierId: tier.id,
       name: product.name,
       image: product.heroImage,

@@ -12,6 +12,7 @@ type L = { en: string; hi: string };
  */
 export type CartLine = {
   slug: string;
+  code: string;
   tierId: string;
   qty: number;
   name: L;

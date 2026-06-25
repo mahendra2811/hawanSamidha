@@ -47,6 +47,23 @@ const CATEGORY_MAP: Record<string, Category> = {
   "Sandalwood Powder": "sandalwood",
 };
 
+// Short SKU prefix per category -> codes like "BRQ-01". Deterministic (depends
+// only on catalogue order), so re-running keeps each product's code stable.
+const CODE_PREFIX: Record<Category, string> = {
+  "hawan-samagri": "HSM",
+  "havan-samidha": "SMD",
+  "pooja-items": "PUJ",
+  "pooja-moli": "MOL",
+  "incense-dhoop": "DHP",
+  "incense-sticks": "INC",
+  "camphor-tablet": "CAM",
+  "cotton-wicks": "WCK",
+  sandalwood: "SND",
+  briquettes: "BRQ",
+  "epoxy-resin": "EPX",
+  "new-items": "NEW",
+};
+
 // HSN codes where confidently applicable (MEGA_PROMPT §1: 4401, 4403, 9403).
 const HSN_BY_CATEGORY: Partial<Record<Category, string>> = {
   briquettes: "4401",
@@ -447,11 +464,16 @@ function main() {
 
   const usedSlugs = new Set<string>();
   const firstSeenCategory = new Set<Category>();
+  const codeCounters: Record<string, number> = {};
 
   const out = src.map((p) => {
     const category = CATEGORY_MAP[p.category];
     if (!category) throw new Error(`Unmapped category "${p.category}" (product ${p.id})`);
     const specs = p.specifications ?? {};
+
+    // Short unique SKU, e.g. "BRQ-01" (sequential within each category).
+    const seq = (codeCounters[category] = (codeCounters[category] ?? 0) + 1);
+    const code = `${CODE_PREFIX[category]}-${String(seq).padStart(2, "0")}`;
 
     // slug (dedupe with id suffix)
     let slug = slugify(p.name);
@@ -518,6 +540,7 @@ function main() {
     const nameEn = titleCaseClean(p.name);
     return {
       slug,
+      code,
       name: { en: nameEn, hi: toHindi(nameEn) },
       category,
       brand: "Ammedi",

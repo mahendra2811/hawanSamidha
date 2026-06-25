@@ -80,6 +80,7 @@ export type Spec = z.infer<typeof specSchema>;
 
 export const productSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/, "slug must be lowercase, digits, hyphens"),
+  code: z.string().min(1), // short unique SKU, e.g. "BRQ-01"
   name: localizedSchema,
   category: categorySchema,
   brand: z.string().default("Ammedi"),

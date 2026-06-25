@@ -26,6 +26,9 @@ export const env = {
   whatsapp: clean(process.env.NEXT_PUBLIC_WHATSAPP),
   enquiryEmail: clean(process.env.ENQUIRY_TO_EMAIL),
   resendApiKey: clean(process.env.RESEND_API_KEY),
+  // Web3Forms is submitted from the browser (free plan blocks server IPs), so
+  // the key is NEXT_PUBLIC. It is a public submission key by design.
+  web3formsKey: clean(process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY),
 
   // Channels
   indiamartUrl: clean(process.env.NEXT_PUBLIC_INDIAMART_URL),

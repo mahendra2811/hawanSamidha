@@ -1,6 +1,7 @@
 [
   {
     "slug": "90mm-biomass-briquettes",
+    "code": "BRQ-01",
     "name": {
       "en": "90Mm Biomass Briquettes",
       "hi": "90मिमी बायोमास ब्रिकेट्स"
@@ -137,6 +138,7 @@
   },
   {
     "slug": "sawdust-biomass-briquette",
+    "code": "BRQ-02",
     "name": {
       "en": "Sawdust Biomass Briquette",
       "hi": "लकड़ी का बुरादा बायोमास ब्रिकेट"
@@ -363,6 +365,7 @@
   },
   {
     "slug": "pure-handicraft-hardwood-sawdust",
+    "code": "BRQ-03",
     "name": {
       "en": "Pure Handicraft Hardwood Sawdust",
       "hi": "शुद्ध हस्तशिल्प हार्डवुड बुरादा"
@@ -504,6 +507,7 @@
   },
   {
     "slug": "biomass-briquettes-white-coal",
+    "code": "BRQ-04",
     "name": {
       "en": "Biomass Briquettes White Coal",
       "hi": "बायोमास ब्रिकेट्स सफेद कोयला"
@@ -645,6 +649,7 @@
   },
   {
     "slug": "white-coal-biomass-briquette",
+    "code": "BRQ-05",
     "name": {
       "en": "White Coal Biomass Briquette",
       "hi": "सफेद कोयला बायोमास ब्रिकेट"
@@ -793,6 +798,7 @@
   },
   {
     "slug": "biomass-briquettes",
+    "code": "BRQ-06",
     "name": {
       "en": "Biomass Briquettes",
       "hi": "बायोमास ब्रिकेट्स"
@@ -931,6 +937,7 @@
   },
   {
     "slug": "biomass-briquettes-7",
+    "code": "BRQ-07",
     "name": {
       "en": "Biomass Briquettes",
       "hi": "बायोमास ब्रिकेट्स"
@@ -1075,6 +1082,7 @@
   },
   {
     "slug": "biocoal",
+    "code": "BRQ-08",
     "name": {
       "en": "Biocoal",
       "hi": "जैविक कोयला"
@@ -1226,6 +1234,7 @@
   },
   {
     "slug": "mustard-stalk-briquette",
+    "code": "BRQ-09",
     "name": {
       "en": "Mustard Stalk Briquette",
       "hi": "सरसों डंठल ब्रिकेट"
@@ -1352,6 +1361,7 @@
   },
   {
     "slug": "bhimseni-camphor",
+    "code": "CAM-01",
     "name": {
       "en": "Bhimseni Camphor",
       "hi": "भीमसेनी कपूर"
@@ -1474,6 +1484,7 @@
   },
   {
     "slug": "smokeless-camphor",
+    "code": "CAM-02",
     "name": {
       "en": "Smokeless Camphor",
       "hi": "धुआँ रहित कपूर"
@@ -1625,6 +1636,7 @@
   },
   {
     "slug": "camphor",
+    "code": "CAM-03",
     "name": {
       "en": "Camphor",
       "hi": "कपूर"
@@ -1737,6 +1749,7 @@
   },
   {
     "slug": "camphor-tablet",
+    "code": "CAM-04",
     "name": {
       "en": "Camphor Tablet",
       "hi": "कपूर गोली"
@@ -1867,6 +1880,7 @@
   },
   {
     "slug": "ammedi-camphor-tablet-8-gm",
+    "code": "CAM-05",
     "name": {
       "en": "AMMEDI CAMPHOR Tablet 8 GM",
       "hi": "अम्मेदी कपूर गोली 8 ग्राम"
@@ -1989,6 +2003,7 @@
   },
   {
     "slug": "cotton-jyoti-batti",
+    "code": "WCK-01",
     "name": {
       "en": "Cotton Jyoti Batti",
       "hi": "सूती ज्योति बाती"
@@ -2157,6 +2172,7 @@
   },
   {
     "slug": "ammedi-brand-cotton-wicks",
+    "code": "WCK-02",
     "name": {
       "en": "Ammedi Brand Cotton Wicks",
       "hi": "अम्मेदी ब्रांड सूती बातियाँ"
@@ -2267,6 +2283,7 @@
   },
   {
     "slug": "ammedi-cotton-batti",
+    "code": "WCK-03",
     "name": {
       "en": "Ammedi Cotton Batti",
       "hi": "अम्मेदी सूती बाती"
@@ -2416,6 +2433,7 @@
   },
   {
     "slug": "tabletop-epoxy-resin-and-hardener",
+    "code": "EPX-01",
     "name": {
       "en": "Tabletop Epoxy Resin And Hardener",
       "hi": "Tabletop एपॉक्सी रेज़िन और हार्डनर"
@@ -2556,6 +2574,7 @@
   },
   {
     "slug": "mistri-bond-epoxy-resin",
+    "code": "EPX-02",
     "name": {
       "en": "Mistri bond Epoxy Resin",
       "hi": "मिस्त्री बॉन्ड एपॉक्सी रेज़िन"
@@ -2681,6 +2700,7 @@
   },
   {
     "slug": "wood-fillers",
+    "code": "EPX-03",
     "name": {
       "en": "Wood Fillers",
       "hi": "वुड फिलर"
@@ -2867,6 +2887,7 @@
   },
   {
     "slug": "crystal-clear-epoxy-resin-and-hardener",
+    "code": "EPX-04",
     "name": {
       "en": "Crystal Clear Epoxy Resin And Hardener",
       "hi": "क्रिस्टल क्लियर एपॉक्सी रेज़िन और हार्डनर"
@@ -3037,6 +3058,7 @@
   },
   {
     "slug": "araldite-epoxy-hardeners",
+    "code": "EPX-05",
     "name": {
       "en": "Araldite Epoxy Hardeners",
       "hi": "Araldite एपॉक्सी हार्डनर"
@@ -3204,6 +3226,7 @@
   },
   {
     "slug": "packing-havan-samidha-ammedi",
+    "code": "SMD-01",
     "name": {
       "en": "Packing Havan Samidha Ammedi",
       "hi": "पैकिंग हवन समिधा अम्मेदी"
@@ -3365,6 +3388,7 @@
   },
   {
     "slug": "hawan-samidha-mango-wood",
+    "code": "SMD-02",
     "name": {
       "en": "Hawan Samidha Mango Wood",
       "hi": "हवन समिधा आम की लकड़ी"
@@ -3548,6 +3572,7 @@
   },
   {
     "slug": "havan-samidha-mango-wood",
+    "code": "SMD-03",
     "name": {
       "en": "Havan Samidha Mango Wood",
       "hi": "हवन समिधा आम की लकड़ी"
@@ -3687,6 +3712,7 @@
   },
   {
     "slug": "havan-samidha-aam-ki-lakdi",
+    "code": "SMD-04",
     "name": {
       "en": "Havan Samidha Aam Ki Lakdi",
       "hi": "हवन समिधा आम की लकड़ी"
@@ -3814,6 +3840,7 @@
   },
   {
     "slug": "anjani-putra-hawan-samidha",
+    "code": "SMD-05",
     "name": {
       "en": "Anjani Putra Hawan Samidha",
       "hi": "अंजनी पुत्र हवन समिधा"
@@ -4033,6 +4060,7 @@
   },
   {
     "slug": "navgrah-havan-samidha",
+    "code": "SMD-06",
     "name": {
       "en": "Navgrah Havan Samidha",
       "hi": "नवग्रह हवन समिधा"
@@ -4223,6 +4251,7 @@
   },
   {
     "slug": "ammedi-hawan-samidha",
+    "code": "SMD-07",
     "name": {
       "en": "Ammedi Hawan Samidha",
       "hi": "अम्मेदी हवन समिधा"
@@ -4387,6 +4416,7 @@
   },
   {
     "slug": "pooja-havan-samagri",
+    "code": "HSM-01",
     "name": {
       "en": "Pooja Havan Samagri",
       "hi": "पूजा हवन सामग्री"
@@ -4519,6 +4549,7 @@
   },
   {
     "slug": "ammedi-hawan-samagri",
+    "code": "HSM-02",
     "name": {
       "en": "Ammedi Hawan Samagri",
       "hi": "अम्मेदी हवन सामग्री"
@@ -4674,6 +4705,7 @@
   },
   {
     "slug": "pooja-hawan-samagri",
+    "code": "HSM-03",
     "name": {
       "en": "Pooja Hawan Samagri",
       "hi": "पूजा हवन सामग्री"
@@ -4772,6 +4804,7 @@
   },
   {
     "slug": "hawan-samagri-loose",
+    "code": "HSM-04",
     "name": {
       "en": "Hawan Samagri Loose",
       "hi": "हवन सामग्री लूज़"
@@ -4869,6 +4902,7 @@
   },
   {
     "slug": "mul-shanti-samagri",
+    "code": "HSM-05",
     "name": {
       "en": "Mul Shanti Samagri",
       "hi": "मूल शांति सामग्री"
@@ -4966,6 +5000,7 @@
   },
   {
     "slug": "pooja-havan-samagri-35",
+    "code": "HSM-06",
     "name": {
       "en": "Pooja Havan Samagri",
       "hi": "पूजा हवन सामग्री"
@@ -5081,6 +5116,7 @@
   },
   {
     "slug": "mango-wood-planks",
+    "code": "HSM-07",
     "name": {
       "en": "Mango Wood Planks",
       "hi": "आम की लकड़ी प्लैंक"
@@ -5240,6 +5276,7 @@
   },
   {
     "slug": "ammedi-moli-kalawa",
+    "code": "HSM-08",
     "name": {
       "en": "AMMEDI Moli Kalawa",
       "hi": "अम्मेदी मोली कलावा"
@@ -5415,6 +5452,7 @@
   },
   {
     "slug": "ammedi-pooja-gangajal",
+    "code": "HSM-09",
     "name": {
       "en": "Ammedi Pooja Gangajal",
       "hi": "अम्मेदी पूजा गंगाजल"
@@ -5546,6 +5584,7 @@
   },
   {
     "slug": "ammedi-astagandha-powder",
+    "code": "HSM-10",
     "name": {
       "en": "Ammedi Astagandha Powder",
       "hi": "अम्मेदी अष्टगंध पाउडर"
@@ -5657,6 +5696,7 @@
   },
   {
     "slug": "pooja-box",
+    "code": "HSM-11",
     "name": {
       "en": "Pooja Box",
       "hi": "पूजा बॉक्स"
@@ -5818,6 +5858,7 @@
   },
   {
     "slug": "ammedi-pooja-kalawa",
+    "code": "HSM-12",
     "name": {
       "en": "Ammedi Pooja Kalawa",
       "hi": "अम्मेदी पूजा कलावा"
@@ -5907,6 +5948,7 @@
   },
   {
     "slug": "roli",
+    "code": "HSM-13",
     "name": {
       "en": "Roli",
       "hi": "रोली"
@@ -6021,6 +6063,7 @@
   },
   {
     "slug": "aromatic-incense-sticks",
+    "code": "DHP-01",
     "name": {
       "en": "Aromatic Incense Sticks",
       "hi": "सुगंधित अगरबत्ती"
@@ -6175,6 +6218,7 @@
   },
   {
     "slug": "gugal-premium-dhoop-sticks",
+    "code": "DHP-02",
     "name": {
       "en": "Gugal Premium Dhoop Sticks",
       "hi": "गुग्गल प्रीमियम धूप स्टिक"
@@ -6284,6 +6328,7 @@
   },
   {
     "slug": "incense-dhoop-and-sticks",
+    "code": "DHP-03",
     "name": {
       "en": "Incense Dhoop & Sticks",
       "hi": "अगरबत्ती धूप व स्टिक"
@@ -6429,6 +6474,7 @@
   },
   {
     "slug": "dry-dhoop-sticks",
+    "code": "DHP-04",
     "name": {
       "en": "Dry Dhoop Sticks",
       "hi": "Dry धूप स्टिक"
@@ -6539,6 +6585,7 @@
   },
   {
     "slug": "lavender-premium-dhoop-sticks",
+    "code": "DHP-05",
     "name": {
       "en": "Lavender Premium Dhoop Sticks",
       "hi": "लैवेंडर प्रीमियम धूप स्टिक"
@@ -6663,6 +6710,7 @@
   },
   {
     "slug": "hawan-dhoop-batti",
+    "code": "DHP-06",
     "name": {
       "en": "Hawan Dhoop Batti",
       "hi": "हवन धूप बाती"
@@ -6769,6 +6817,7 @@
   },
   {
     "slug": "ammedi-incense-sticks",
+    "code": "INC-01",
     "name": {
       "en": "Ammedi Incense Sticks",
       "hi": "अम्मेदी अगरबत्ती"
@@ -6926,6 +6975,7 @@
   },
   {
     "slug": "loban-incense-sticks",
+    "code": "INC-02",
     "name": {
       "en": "Loban Incense Sticks",
       "hi": "लोबान अगरबत्ती"
@@ -7086,6 +7136,7 @@
   },
   {
     "slug": "premium-incense-sticks",
+    "code": "INC-03",
     "name": {
       "en": "Premium Incense Sticks",
       "hi": "प्रीमियम अगरबत्ती"
@@ -7283,6 +7334,7 @@
   },
   {
     "slug": "mogra-premium-incense-stick",
+    "code": "INC-04",
     "name": {
       "en": "Mogra Premium Incense Stick",
       "hi": "मोगरा प्रीमियम अगरबत्ती"
@@ -7416,6 +7468,7 @@
   },
   {
     "slug": "chandan-premium-incense-sticks",
+    "code": "INC-05",
     "name": {
       "en": "Chandan Premium Incense Sticks",
       "hi": "चंदन प्रीमियम अगरबत्ती"
@@ -7571,6 +7624,7 @@
   },
   {
     "slug": "ammedi-gopi-chandan",
+    "code": "INC-06",
     "name": {
       "en": "AMMEDI Gopi Chandan",
       "hi": "अम्मेदी गोपी चंदन"
@@ -7709,6 +7763,7 @@
   },
   {
     "slug": "natural-incense-stick",
+    "code": "INC-07",
     "name": {
       "en": "Natural Incense Stick",
       "hi": "प्राकृतिक अगरबत्ती"
@@ -7846,6 +7901,7 @@
   },
   {
     "slug": "ammedi-masala-agarbatti",
+    "code": "INC-08",
     "name": {
       "en": "AMMEDI Masala Agarbatti",
       "hi": "अम्मेदी मसाला अगरबत्ती"
@@ -7996,6 +8052,7 @@
   },
   {
     "slug": "incense-sticks-fragrances",
+    "code": "INC-09",
     "name": {
       "en": "Incense Sticks Fragrances",
       "hi": "अगरबत्ती सुगंध"
@@ -8120,6 +8177,7 @@
   },
   {
     "slug": "white-incense-stick",
+    "code": "INC-10",
     "name": {
       "en": "White Incense Stick",
       "hi": "सफेद अगरबत्ती"
@@ -8258,6 +8316,7 @@
   },
   {
     "slug": "white-coal-biomass-briquette-59",
+    "code": "NEW-01",
     "name": {
       "en": "White Coal Biomass Briquette",
       "hi": "सफेद कोयला बायोमास ब्रिकेट"
@@ -8313,6 +8372,7 @@
   },
   {
     "slug": "wooden-agarbatti-box",
+    "code": "NEW-02",
     "name": {
       "en": "Wooden Agarbatti Box",
       "hi": "लकड़ी का अगरबत्ती बॉक्स"
@@ -8466,6 +8526,7 @@
   },
   {
     "slug": "wooden-khadau-padukas",
+    "code": "NEW-03",
     "name": {
       "en": "Wooden Khadau Padukas",
       "hi": "लकड़ी की खड़ाऊ पादुका"
@@ -8630,6 +8691,7 @@
   },
   {
     "slug": "wooden-khadau-padukas-62",
+    "code": "NEW-04",
     "name": {
       "en": "Wooden Khadau Padukas",
       "hi": "लकड़ी की खड़ाऊ पादुका"
@@ -8789,6 +8851,7 @@
   },
   {
     "slug": "wooden-book-stand",
+    "code": "NEW-05",
     "name": {
       "en": "Wooden Book Stand",
       "hi": "लकड़ी का बुक स्टैंड"
@@ -8918,6 +8981,7 @@
   },
   {
     "slug": "ammedi-brand-pooja-kapda",
+    "code": "MOL-01",
     "name": {
       "en": "Ammedi Brand Pooja Kapda",
       "hi": "अम्मेदी ब्रांड पूजा कपड़ा"
@@ -9089,6 +9153,7 @@
   },
   {
     "slug": "ammedi-pooja-moli",
+    "code": "MOL-02",
     "name": {
       "en": "AMMEDI Pooja Moli",
       "hi": "अम्मेदी पूजा मोली"
@@ -9288,6 +9353,7 @@
   },
   {
     "slug": "pooja-janeu-thread",
+    "code": "MOL-03",
     "name": {
       "en": "Pooja Janeu Thread",
       "hi": "पूजा जनेऊ धागा"
@@ -9413,6 +9479,7 @@
   },
   {
     "slug": "ammedi-large-pooja-moli",
+    "code": "MOL-04",
     "name": {
       "en": "Ammedi Large Pooja Moli",
       "hi": "अम्मेदी बड़ी पूजा मोली"
@@ -9538,6 +9605,7 @@
   },
   {
     "slug": "ammedi-pooja-kalawa-68",
+    "code": "MOL-05",
     "name": {
       "en": "Ammedi Pooja Kalawa",
       "hi": "अम्मेदी पूजा कलावा"
@@ -9719,6 +9787,7 @@
   },
   {
     "slug": "ammedi-6-coya-kalawa",
+    "code": "MOL-06",
     "name": {
       "en": "Ammedi 6'' Coya Kalawa",
       "hi": "अम्मेदी 6'' कोया कलावा"
@@ -9830,6 +9899,7 @@
   },
   {
     "slug": "ammedi-pooja-moli-70",
+    "code": "MOL-07",
     "name": {
       "en": "Ammedi Pooja Moli",
       "hi": "अम्मेदी पूजा मोली"
@@ -9972,6 +10042,7 @@
   },
   {
     "slug": "ammedi-moli-gola",
+    "code": "MOL-08",
     "name": {
       "en": "Ammedi Moli Gola",
       "hi": "अम्मेदी मोली गोला"
@@ -10081,6 +10152,7 @@
   },
   {
     "slug": "ammedi-sapt-mrittika",
+    "code": "PUJ-01",
     "name": {
       "en": "Ammedi Sapt Mrittika",
       "hi": "अम्मेदी सप्त मृत्तिका"
@@ -10236,6 +10308,7 @@
   },
   {
     "slug": "ammedi-puja-kapda",
+    "code": "PUJ-02",
     "name": {
       "en": "Ammedi Puja Kapda",
       "hi": "अम्मेदी पूजा कपड़ा"
@@ -10378,6 +10451,7 @@
   },
   {
     "slug": "puja-bhasmi",
+    "code": "PUJ-03",
     "name": {
       "en": "Puja Bhasmi",
       "hi": "पूजा भस्मी"
@@ -10503,6 +10577,7 @@
   },
   {
     "slug": "ammedi-6-mothana-moli",
+    "code": "PUJ-04",
     "name": {
       "en": "Ammedi 6'' Mothana Moli",
       "hi": "अम्मेदी 6'' मोथना मोली"
@@ -10620,6 +10695,7 @@
   },
   {
     "slug": "ammedi-puja-accessories",
+    "code": "PUJ-05",
     "name": {
       "en": "Ammedi Puja Accessories",
       "hi": "अम्मेदी पूजा सामग्री"
@@ -10696,6 +10772,7 @@
   },
   {
     "slug": "ammedi-ashtagandha-powder",
+    "code": "PUJ-06",
     "name": {
       "en": "Ammedi Ashtagandha Powder",
       "hi": "अम्मेदी अष्टगंध पाउडर"
@@ -10846,6 +10923,7 @@
   },
   {
     "slug": "ammedi-pooja-thali",
+    "code": "PUJ-07",
     "name": {
       "en": "Ammedi Pooja Thali",
       "hi": "अम्मेदी पूजा थाली"
@@ -11039,6 +11117,7 @@
   },
   {
     "slug": "pooja-kumkum-powder",
+    "code": "PUJ-08",
     "name": {
       "en": "Pooja Kumkum Powder",
       "hi": "पूजा कुमकुम पाउडर"
@@ -11163,6 +11242,7 @@
   },
   {
     "slug": "ammedi-gomutra-500ml",
+    "code": "PUJ-09",
     "name": {
       "en": "Ammedi Gomutra 500Ml",
       "hi": "अम्मेदी गोमूत्र 500मिली"
@@ -11217,6 +11297,7 @@
   },
   {
     "slug": "natural-gangajal-1-litre",
+    "code": "PUJ-10",
     "name": {
       "en": "Natural Gangajal 1 Litre",
       "hi": "प्राकृतिक गंगाजल 1 लीटर"
@@ -11344,6 +11425,7 @@
   },
   {
     "slug": "ammedi-kumkum-8gm-packing",
+    "code": "PUJ-11",
     "name": {
       "en": "Ammedi Kumkum 8Gm Packing",
       "hi": "अम्मेदी कुमकुम 8ग्राम पैकिंग"
@@ -11457,6 +11539,7 @@
   },
   {
     "slug": "ammedi-blue-label-moli",
+    "code": "PUJ-12",
     "name": {
       "en": "Ammedi Blue Label Moli",
       "hi": "अम्मेदी ब्लू लेबल मोली"
@@ -11557,6 +11640,7 @@
   },
   {
     "slug": "dhoop-sticks",
+    "code": "PUJ-13",
     "name": {
       "en": "Dhoop Sticks",
       "hi": "धूप स्टिक"
@@ -11668,6 +11752,7 @@
   },
   {
     "slug": "hanuman-sindoor",
+    "code": "PUJ-14",
     "name": {
       "en": "Hanuman Sindoor",
       "hi": "हनुमान सिंदूर"
@@ -11791,6 +11876,7 @@
   },
   {
     "slug": "kumkum-roli",
+    "code": "PUJ-15",
     "name": {
       "en": "Kumkum Roli",
       "hi": "कुमकुम रोली"
@@ -11906,6 +11992,7 @@
   },
   {
     "slug": "500-ml-gangajal-bottle",
+    "code": "PUJ-16",
     "name": {
       "en": "500 Ml Gangajal Bottle",
       "hi": "500 मिली गंगाजल बोतल"
@@ -11975,6 +12062,7 @@
   },
   {
     "slug": "incense-dhoop",
+    "code": "PUJ-17",
     "name": {
       "en": "Incense Dhoop",
       "hi": "अगरबत्ती धूप"
@@ -12097,6 +12185,7 @@
   },
   {
     "slug": "ashtagandha",
+    "code": "PUJ-18",
     "name": {
       "en": "Ashtagandha",
       "hi": "Ashtagandha"
@@ -12206,6 +12295,7 @@
   },
   {
     "slug": "jasmine-oil",
+    "code": "PUJ-19",
     "name": {
       "en": "Jasmine Oil",
       "hi": "चमेली का तेल"
@@ -12365,6 +12455,7 @@
   },
   {
     "slug": "pooja-moli-thread",
+    "code": "SND-01",
     "name": {
       "en": "Pooja Moli Thread",
       "hi": "पूजा मोली धागा"
@@ -12520,6 +12611,7 @@
   },
   {
     "slug": "red-chandan-powder",
+    "code": "SND-02",
     "name": {
       "en": "Red Chandan Powder",
       "hi": "लाल चंदन पाउडर"
@@ -12650,6 +12742,7 @@
   },
   {
     "slug": "red-sandal-wood",
+    "code": "SND-03",
     "name": {
       "en": "Red Sandal Wood",
       "hi": "लाल चंदन"
@@ -12757,6 +12850,7 @@
   },
   {
     "slug": "chandan-powder",
+    "code": "SND-04",
     "name": {
       "en": "Chandan Powder",
       "hi": "चंदन पाउडर"
@@ -12889,6 +12983,7 @@
   },
   {
     "slug": "sandalwood-powder",
+    "code": "SND-05",
     "name": {
       "en": "Sandalwood Powder",
       "hi": "चंदन पाउडर"
@@ -13030,6 +13125,7 @@
   },
   {
     "slug": "kesar-chandan",
+    "code": "SND-06",
     "name": {
       "en": "Kesar Chandan",
       "hi": "केसर चंदन"
@@ -13129,6 +13225,7 @@
   },
   {
     "slug": "rita-powder",
+    "code": "SND-07",
     "name": {
       "en": "Rita Powder",
       "hi": "रीठा पाउडर"
@@ -13246,6 +13343,7 @@
   },
   {
     "slug": "chandan-tikka",
+    "code": "SND-08",
     "name": {
       "en": "Chandan Tikka",
       "hi": "चंदन टिक्का"
@@ -13316,6 +13414,7 @@
   },
   {
     "slug": "sandalwood-incense-sticks",
+    "code": "SND-09",
     "name": {
       "en": "Sandalwood Incense Sticks",
       "hi": "चंदन अगरबत्ती"
@@ -13474,6 +13573,7 @@
   },
   {
     "slug": "white-chandan-powder",
+    "code": "SND-10",
     "name": {
       "en": "White Chandan Powder",
       "hi": "सफेद चंदन पाउडर"

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { ShoppingBag } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -14,6 +15,8 @@ export function CheckoutClient() {
   const tc = useTranslations("Checkout");
   const lines = useCart((s) => s.lines);
   const hydrated = useCart((s) => s.hasHydrated);
+  // Keep showing the form (and its success panel) after a submit clears the cart.
+  const [submitted, setSubmitted] = useState(false);
 
   if (!hydrated) {
     return (
@@ -24,7 +27,7 @@ export function CheckoutClient() {
     );
   }
 
-  if (lines.length === 0) {
+  if (lines.length === 0 && !submitted) {
     return (
       <div className="flex flex-col items-center justify-center gap-4 rounded-2xl border border-border bg-surface py-20 text-center">
         <ShoppingBag size={40} className="text-text-muted" aria-hidden />
@@ -37,24 +40,28 @@ export function CheckoutClient() {
     );
   }
 
+  const hasItems = lines.length > 0;
+
   return (
     <div className="grid gap-10 lg:grid-cols-2">
-      <section aria-label={tc("summaryTitle")}>
-        <h2 className="mb-4 font-display text-xl font-semibold text-text">{tc("summaryTitle")}</h2>
-        <div className="rounded-2xl border border-border bg-surface px-5">
-          <div className="divide-y divide-border">
-            {lines.map((line) => (
-              <CartItem key={`${line.slug}__${line.tierId}`} line={line} />
-            ))}
+      {hasItems && (
+        <section aria-label={tc("summaryTitle")}>
+          <h2 className="mb-4 font-display text-xl font-semibold text-text">{tc("summaryTitle")}</h2>
+          <div className="rounded-2xl border border-border bg-surface px-5">
+            <div className="divide-y divide-border">
+              {lines.map((line) => (
+                <CartItem key={`${line.slug}__${line.tierId}`} line={line} />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="mt-4 rounded-2xl border border-border bg-surface p-5">
-          <CartSummary />
-        </div>
-      </section>
+          <div className="mt-4 rounded-2xl border border-border bg-surface p-5">
+            <CartSummary />
+          </div>
+        </section>
+      )}
 
-      <section aria-label={tc("title")}>
-        <EnquiryForm />
+      <section aria-label={tc("title")} className={hasItems ? "" : "mx-auto w-full max-w-xl lg:col-span-2"}>
+        <EnquiryForm onSubmitted={() => setSubmitted(true)} />
       </section>
     </div>
   );

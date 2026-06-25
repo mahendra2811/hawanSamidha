@@ -103,9 +103,14 @@ export default async function ProductPage({
           <Gallery images={product.images.length ? product.images : [product.heroImage]} alt={name} />
 
           <div>
-            <p className="text-sm uppercase tracking-wide text-text-muted">
-              {categoryLabel(product.category, locale)}
-            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <p className="text-sm uppercase tracking-wide text-text-muted">
+                {categoryLabel(product.category, locale)}
+              </p>
+              <span className="rounded bg-elevated px-2 py-0.5 font-mono text-xs text-text-secondary">
+                {product.code}
+              </span>
+            </div>
             <h1 className="mt-1 font-display text-3xl font-semibold text-text sm:text-4xl">
               {name}
             </h1>
