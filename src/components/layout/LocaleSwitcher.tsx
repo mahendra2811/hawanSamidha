@@ -25,7 +25,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
           onClick={() => router.replace(pathname, { locale: l })}
           className={cn(
             "rounded px-2.5 py-1 text-xs font-medium transition-colors",
-            locale === l ? "grad-gold text-base" : "text-text-secondary hover:text-text",
+            locale === l ? "grad-gold text-on-gold" : "text-text-secondary hover:text-text",
           )}
         >
           {t(l)}

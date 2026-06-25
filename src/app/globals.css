@@ -1,22 +1,28 @@
 @import "tailwindcss";
 
 /* ───────────────────────── Agni Gold theme ─────────────────────────
-   Dark premium, gradient-forward. Tokens drive every color / font;
-   never hardcode hex in components — use these utilities & vars. */
+   Light by default; dark under [data-theme="dark"]. Color tokens are backed
+   by CSS vars (--c-*) that flip per theme, so every bg-*/text-* utility
+   re-themes automatically — components never hardcode hex.
+   Two constant tokens never flip:
+     on-gold  → dark ink for text on gold gradients
+     on-dark  → light text for always-dark surfaces (the hero band) */
 @theme {
-  --color-base: #150f0c; /* ember black page bg */
-  --color-surface: #211813; /* cards */
-  --color-elevated: #2c211a; /* raised / drawer */
-  --color-ember: #7a1f1f;
-  --color-saffron: #ff8c32;
-  --color-gold: #f5c84c;
-  --color-gold-soft: #e9c46a;
-  --color-text: #f7ecdd;
-  --color-text-secondary: #c9b8a4;
-  --color-text-muted: #8a7a68;
-  --color-border: rgba(245, 200, 76, 0.12);
+  --color-base: var(--c-base);
+  --color-surface: var(--c-surface);
+  --color-elevated: var(--c-elevated);
+  --color-ember: var(--c-ember);
+  --color-saffron: var(--c-saffron);
+  --color-gold: var(--c-gold);
+  --color-gold-soft: var(--c-gold-soft);
+  --color-text: var(--c-text);
+  --color-text-secondary: var(--c-text-secondary);
+  --color-text-muted: var(--c-text-muted);
+  --color-border: var(--c-border);
   --color-success: #4fa46a;
   --color-danger: #d9534f;
+  --color-on-gold: #1c1208;
+  --color-on-dark: #f7ecdd;
 
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: var(--font-jakarta), system-ui, sans-serif;
@@ -25,12 +31,45 @@
   --radius: 14px; /* `rounded` => 14px; use rounded-2xl/3xl for larger */
 }
 
+/* Light theme (default) */
 :root {
-  color-scheme: dark;
-  --grad-gold: linear-gradient(135deg, var(--color-saffron), var(--color-gold));
-  --grad-hero: linear-gradient(160deg, #150f0c 0%, #3a1410 45%, #7a1f1f 75%, #ff8c32 100%);
-  --grad-glow: radial-gradient(circle at center, rgba(245, 200, 76, 0.35), transparent 70%);
+  color-scheme: light;
+  --c-base: #fbf6ec; /* warm cream page bg */
+  --c-surface: #ffffff; /* cards */
+  --c-elevated: #fbf1df; /* raised / drawer */
+  --c-ember: #7a1f1f;
+  --c-saffron: #d9701a;
+  --c-gold: #a86a12; /* darkened for legible accents on light */
+  --c-gold-soft: #c2902f;
+  --c-text: #271b12;
+  --c-text-secondary: #5e4e3d;
+  --c-text-muted: #8a7659;
+  --c-border: rgba(122, 31, 31, 0.14);
+
+  --grad-gold: linear-gradient(135deg, #f0851f, #f2b23c);
+  --grad-glow: radial-gradient(circle at center, rgba(216, 138, 26, 0.22), transparent 70%);
   --grad-conic: conic-gradient(from 0deg, #7a1f1f, #ff8c32, #f5c84c, #7a1f1f);
+  /* Hero stays a dramatic dark band in both themes. */
+  --grad-hero: linear-gradient(160deg, #150f0c 0%, #3a1410 45%, #7a1f1f 75%, #ff8c32 100%);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --c-base: #150f0c;
+  --c-surface: #211813;
+  --c-elevated: #2c211a;
+  --c-ember: #7a1f1f;
+  --c-saffron: #ff8c32;
+  --c-gold: #f5c84c;
+  --c-gold-soft: #e9c46a;
+  --c-text: #f7ecdd;
+  --c-text-secondary: #c9b8a4;
+  --c-text-muted: #8a7a68;
+  --c-border: rgba(245, 200, 76, 0.12);
+
+  --grad-gold: linear-gradient(135deg, #ff8c32, #f5c84c);
+  --grad-glow: radial-gradient(circle at center, rgba(245, 200, 76, 0.35), transparent 70%);
 }
 
 html {

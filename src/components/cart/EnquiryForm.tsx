@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -8,6 +8,7 @@ import { CheckCircle2, AlertTriangle } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { MOBILE_RE, EMAIL_RE } from "@/lib/enquiry-schema";
 import { useCart } from "@/store/cart";
+import { useProfile } from "@/store/profile";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
@@ -48,16 +49,26 @@ export function EnquiryForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
     defaultValues: { name: "", mobile: "", email: "", message: "" },
   });
 
+  // Prefill from the saved profile once it hydrates (one tap to send).
+  const profile = useProfile();
+  useEffect(() => {
+    if (!profile.hasHydrated) return;
+    reset({ name: profile.name, mobile: profile.mobile, email: profile.email, message: "" });
+  }, [profile.hasHydrated, profile.name, profile.mobile, profile.email, reset]);
+
   const cartMessage = buildCartEnquiry(lines, locale);
 
   async function onSubmit(values: FormValues) {
     setStatus("submitting");
+    // Remember the buyer's details on-device for next time.
+    profile.save({ name: values.name, mobile: values.mobile, email: values.email ?? "" });
     const items = lines.map((l) => ({
       slug: l.slug,
       tierId: l.tierId,

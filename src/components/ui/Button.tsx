@@ -6,7 +6,7 @@ export type ButtonSize = "sm" | "md" | "lg";
 
 const VARIANTS: Record<ButtonVariant, string> = {
   // gold gradient with ember-dark text (the signature CTA)
-  primary: "grad-gold text-base font-semibold hover:brightness-110 shadow-lg shadow-saffron/20",
+  primary: "grad-gold text-on-gold font-semibold hover:brightness-110 shadow-lg shadow-saffron/20",
   secondary: "bg-elevated text-text border-hairline hover:bg-surface",
   outline: "border border-gold/40 text-gold hover:bg-gold/10",
   ghost: "text-text-secondary hover:text-text hover:bg-surface",

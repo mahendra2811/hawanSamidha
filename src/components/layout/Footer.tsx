@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { ChannelLinks } from "@/components/channels/ChannelLinks";
 import { NAV_ITEMS } from "./nav-items";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 import { site } from "@/config/site";
 
 export async function Footer() {
@@ -93,17 +94,18 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-3 border-t border-border py-6 text-sm text-text-muted sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-border py-6 text-sm text-text-muted sm:flex-row">
           <p>
             © {site.company.establishedYear}–2026 {site.company.legalName}. {t("rights")}
           </p>
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <Link href="/privacy" className="transition-colors hover:text-gold">
               {t("privacy")}
             </Link>
             <Link href="/terms" className="transition-colors hover:text-gold">
               {t("terms")}
             </Link>
+            <LocaleSwitcher />
           </div>
         </div>
       </Container>

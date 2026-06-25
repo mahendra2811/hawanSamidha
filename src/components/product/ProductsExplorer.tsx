@@ -17,7 +17,7 @@ export function ProductsExplorer({ products, locale }: { products: Product[]; lo
   const chip = (selected: boolean) =>
     cn(
       "rounded-full px-4 py-1.5 text-sm font-medium transition-colors whitespace-nowrap",
-      selected ? "grad-gold text-base" : "border border-border bg-surface text-text-secondary hover:text-text",
+      selected ? "grad-gold text-on-gold" : "border border-border bg-surface text-text-secondary hover:text-text",
     );
 
   return (

@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { site } from "@/config/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { BottomNav } from "@/components/layout/BottomNav";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { buildMetadata } from "@/lib/seo";
 import "../globals.css";
@@ -54,6 +55,13 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${fraunces.variable} ${jakarta.variable} ${mukta.variable}`}>
       <body className="flex min-h-screen flex-col bg-base text-text">
+        {/* Apply saved theme before paint (default light) — avoids a flash. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}",
+          }}
+        />
         <NextIntlClientProvider>
           <a
             href="#main"
@@ -62,11 +70,13 @@ export default async function LocaleLayout({
             {t("skipToContent")}
           </a>
           <Header />
-          <main id="main" className="flex-1">
+          {/* pb on mobile clears the fixed bottom nav. */}
+          <main id="main" className="flex-1 pb-16 md:pb-0">
             {children}
           </main>
           <Footer />
           <CartDrawer />
+          <BottomNav />
         </NextIntlClientProvider>
         {site.analytics.gaId && <GoogleAnalytics gaId={site.analytics.gaId} />}
       </body>

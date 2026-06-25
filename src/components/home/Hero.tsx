@@ -13,7 +13,7 @@ export async function Hero() {
   const featured = getFeaturedProducts(1)[0];
 
   return (
-    <section className="grad-hero relative overflow-hidden">
+    <section data-theme="dark" className="grad-hero relative overflow-hidden text-text">
       {/* Static gradient glow fallback — paints immediately (LCP-safe). */}
       <div className="grad-glow pointer-events-none absolute inset-0 opacity-60" aria-hidden />
       {/* 3D sparks hydrate after paint, desktop + motion-OK only. */}

@@ -6,7 +6,25 @@
     "learnMore": "Learn more",
     "close": "Close",
     "menu": "Menu",
+    "more": "More",
+    "toggleTheme": "Toggle light / dark theme",
     "skipToContent": "Skip to content"
+  },
+  "More": {
+    "title": "More",
+    "exploreTitle": "Explore",
+    "settingsTitle": "Settings",
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "Profile": {
+    "title": "Your details",
+    "subtitle": "Saved on this device so checkout is one tap.",
+    "name": "Name",
+    "mobile": "Mobile number",
+    "email": "Email (optional)",
+    "save": "Save details",
+    "saved": "Saved"
   },
   "Nav": {
     "home": "Home",
@@ -42,6 +60,7 @@
     "fromLabel": "From",
     "priceOnEnquiry": "Price on enquiry",
     "viewProduct": "View",
+    "estFrom": "Est. from {price}",
     "resultsCount": "{count, plural, =0 {No products} =1 {1 product} other {# products}}"
   },
   "Product": {
@@ -66,6 +85,7 @@
   },
   "Cart": {
     "title": "Your enquiry cart",
+    "label": "Cart",
     "open": "Open cart",
     "empty": "Your cart is empty.",
     "emptyHint": "Add products to start a wholesale enquiry.",
