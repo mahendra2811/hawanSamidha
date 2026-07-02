@@ -13,7 +13,7 @@ export async function ChannelsSection() {
           <h2 className="font-display text-3xl font-semibold text-text">{t("channelsTitle")}</h2>
           <p className="mt-2 text-text-secondary">{t("channelsSubtitle")}</p>
         </div>
-        <ChannelLinks />
+        <ChannelLinks featured />
       </Container>
     </Section>
   );

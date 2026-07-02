@@ -166,7 +166,9 @@
     "flipkart": "Flipkart",
     "facebook": "Facebook",
     "website": "Website",
-    "visit": "Visit {channel}"
+    "visit": "Visit {channel}",
+    "indiamartTagline": "Verified wholesale storefront — 9+ years, 4.8★ rated",
+    "visitStore": "Visit store"
   },
   "About": {
     "title": "About Ganga Agro Industries",
