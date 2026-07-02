@@ -1,23 +1,18 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { buttonClasses } from "@/components/ui/Button";
+import { HeroBackground } from "@/components/home/HeroBackground";
+import { HERO_IMAGES } from "@/config/hero-images";
 
 export async function Hero() {
   const t = await getTranslations("Home");
 
   return (
     <section className="grad-hero relative isolate overflow-hidden">
-      {/* Full-bleed hero photograph — the LCP image, painted immediately. */}
-      <Image
-        src="/hero/home-hero.webp"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-10 object-cover object-[90%_center] lg:object-center"
-      />
+      {/* Full-bleed hero photograph(s) — first is the LCP image, painted
+          immediately; any additional images become an auto/manual slideshow. */}
+      <HeroBackground images={HERO_IMAGES} />
       {/* Warm scrim: keeps the left-side headline legible over the bright image
           on every viewport, while the product (right) stays visible. Stronger on
           mobile (text spans the width) and lighter on desktop (text is one column). */}
