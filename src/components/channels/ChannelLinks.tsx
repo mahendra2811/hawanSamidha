@@ -65,10 +65,10 @@ export async function ChannelLinks({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t("visit", { channel: channel.label })}
-          className="group flex flex-col items-center gap-5 rounded-2xl border border-border bg-surface p-6 text-center transition-colors hover:border-gold/40 hover:bg-elevated sm:flex-row sm:text-left"
+          className="group border-border bg-surface hover:border-gold/40 hover:bg-elevated flex flex-col items-center gap-5 rounded-2xl border p-6 text-center transition-colors sm:flex-row sm:text-left"
         >
           {channel.logo ? (
-            <span className="grid h-20 w-40 shrink-0 place-items-center rounded-xl bg-white p-3 shadow-sm">
+            <span className="grid h-40 w-48 shrink-0 place-items-center rounded-xl bg-white p-3 shadow-sm">
               <Image
                 src={channel.logo}
                 alt={channel.label}
@@ -78,21 +78,21 @@ export async function ChannelLinks({
               />
             </span>
           ) : (
-            <span className="grid h-16 w-16 shrink-0 place-items-center rounded-xl bg-elevated">
+            <span className="bg-elevated grid h-16 w-16 shrink-0 place-items-center rounded-xl">
               <channel.Icon size={28} className="text-gold" aria-hidden />
             </span>
           )}
           <span className="flex-1">
-            <span className="block font-display text-xl font-semibold text-text">
+            {/* <span className="block font-display text-xl font-semibold text-text">
               {channel.label}
-            </span>
+            </span> */}
             {channel.tagline && (
-              <span className="mt-1 block text-sm text-text-secondary">{channel.tagline}</span>
+              <span className="text-text-secondary mt-1 block text-lg">{channel.tagline}</span>
             )}
           </span>
           <span className={buttonClasses("outline", "md", "shrink-0")}>
             {t("visitStore")}
-            <ExternalLink size={16} aria-hidden />
+            <ExternalLink size={30} aria-hidden />
           </span>
         </a>
       </div>
@@ -102,9 +102,7 @@ export async function ChannelLinks({
   return (
     <ul
       className={cn(
-        variant === "grid"
-          ? "grid grid-cols-2 gap-3 sm:grid-cols-3"
-          : "flex flex-wrap gap-3",
+        variant === "grid" ? "grid grid-cols-2 gap-3 sm:grid-cols-3" : "flex flex-wrap gap-3",
         className,
       )}
     >
@@ -115,7 +113,7 @@ export async function ChannelLinks({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={t("visit", { channel: channel.label })}
-            className="group flex items-center justify-between gap-3 rounded border border-border bg-surface px-4 py-3 transition-colors hover:border-gold/40 hover:bg-elevated"
+            className="group border-border bg-surface hover:border-gold/40 hover:bg-elevated flex items-center justify-between gap-3 rounded border px-4 py-3 transition-colors"
           >
             <span className="flex items-center gap-3">
               {channel.logo ? (
@@ -131,7 +129,7 @@ export async function ChannelLinks({
               ) : (
                 <channel.Icon size={20} className="text-gold" aria-hidden />
               )}
-              <span className="font-medium text-text">{channel.label}</span>
+              <span className="text-text font-medium">{channel.label}</span>
             </span>
             <ExternalLink size={16} className="text-text-muted group-hover:text-gold" aria-hidden />
           </a>

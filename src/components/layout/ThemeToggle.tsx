@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useTheme } from "@/lib/use-theme";
 
 /**
  * Light/dark toggle. Default is light (no attribute); dark sets
@@ -11,18 +11,10 @@ import { useTranslations } from "next-intl";
  */
 export function ThemeToggle({ className }: { className?: string }) {
   const t = useTranslations("Common");
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    const id = requestAnimationFrame(() =>
-      setDark(document.documentElement.getAttribute("data-theme") === "dark"),
-    );
-    return () => cancelAnimationFrame(id);
-  }, []);
+  const dark = useTheme() === "dark";
 
   function toggle() {
     const next = !dark;
-    setDark(next);
     const root = document.documentElement;
     if (next) {
       root.setAttribute("data-theme", "dark");

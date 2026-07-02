@@ -51,6 +51,15 @@
   --grad-conic: conic-gradient(from 0deg, #7a1f1f, #ff8c32, #f5c84c, #7a1f1f);
   /* Warm, light hero in light mode (dark text reads on it). */
   --grad-hero: linear-gradient(160deg, #fffaf2 0%, #fbecd2 42%, #f6d595 74%, #eba94c 100%);
+  /* Left-to-right scrim over the hero photo — keeps the headline legible
+     while the product stays visible on the right. Cream in light mode. */
+  --grad-hero-scrim: linear-gradient(
+    90deg,
+    rgba(253, 246, 233, 0.95) 0%,
+    rgba(253, 246, 233, 0.82) 45%,
+    rgba(253, 246, 233, 0.45) 72%,
+    rgba(253, 246, 233, 0.08) 100%
+  );
 }
 
 /* Dark theme */
@@ -72,6 +81,15 @@
   --grad-glow: radial-gradient(circle at center, rgba(245, 200, 76, 0.35), transparent 70%);
   /* Dramatic dark ember band in dark mode. */
   --grad-hero: linear-gradient(160deg, #150f0c 0%, #3a1410 45%, #7a1f1f 75%, #ff8c32 100%);
+  /* Same left-to-right scrim, in the dark base color, for legible cream text
+     over dark-themed hero photos. */
+  --grad-hero-scrim: linear-gradient(
+    90deg,
+    rgba(21, 15, 12, 0.95) 0%,
+    rgba(21, 15, 12, 0.82) 45%,
+    rgba(21, 15, 12, 0.45) 72%,
+    rgba(21, 15, 12, 0.08) 100%
+  );
 }
 
 html {
@@ -114,6 +132,9 @@ body {
 }
 @utility grad-hero {
   background-image: var(--grad-hero);
+}
+@utility grad-hero-scrim {
+  background-image: var(--grad-hero-scrim);
 }
 @utility grad-glow {
   background-image: var(--grad-glow);
