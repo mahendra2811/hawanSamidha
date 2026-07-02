@@ -10,6 +10,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { FloatingContactLoader } from "@/components/widgets/floating-contact/FloatingContactLoader";
 import { buildMetadata } from "@/lib/seo";
 import "../globals.css";
 
@@ -77,6 +78,7 @@ export default async function LocaleLayout({
           <Footer />
           <CartDrawer />
           <BottomNav />
+          <FloatingContactLoader />
         </NextIntlClientProvider>
         {site.analytics.gaId && <GoogleAnalytics gaId={site.analytics.gaId} />}
       </body>

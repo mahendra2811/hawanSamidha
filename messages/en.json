@@ -135,6 +135,32 @@
       "emailInvalid": "Enter a valid email address."
     }
   },
+  "FloatingContact": {
+    "openLabel": "Open contact form",
+    "closeLabel": "Close contact form",
+    "whatsappLabel": "Chat on WhatsApp",
+    "whatsappPrefill": "Hi, I'm interested in your havan products.",
+    "title": "Quick enquiry",
+    "subtitle": "Leave your number, we'll call you back.",
+    "name": "Your name",
+    "namePlaceholder": "e.g. Ramesh Traders",
+    "mobile": "Mobile number",
+    "mobilePlaceholder": "10-digit mobile",
+    "comment": "Comment (optional)",
+    "commentPlaceholder": "What are you looking for?",
+    "submit": "Send",
+    "submitting": "Sending…",
+    "successTitle": "Thanks!",
+    "successBody": "We'll call you shortly.",
+    "errorTitle": "Couldn't send",
+    "errorBody": "Reach us directly instead:",
+    "errors": {
+      "nameRequired": "Please enter your name.",
+      "mobileRequired": "Please enter your mobile number.",
+      "mobileInvalid": "Enter a valid 10-digit Indian mobile number.",
+      "commentTooLong": "Keep it under 500 characters."
+    }
+  },
   "Channels": {
     "indiamart": "IndiaMART",
     "flipkart": "Flipkart",

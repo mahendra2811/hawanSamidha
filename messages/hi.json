@@ -135,6 +135,32 @@
       "emailInvalid": "मान्य ईमेल पता दर्ज करें।"
     }
   },
+  "FloatingContact": {
+    "openLabel": "संपर्क फॉर्म खोलें",
+    "closeLabel": "संपर्क फॉर्म बंद करें",
+    "whatsappLabel": "व्हाट्सऐप पर चैट करें",
+    "whatsappPrefill": "नमस्ते, मुझे आपके हवन उत्पादों में रुचि है।",
+    "title": "त्वरित पूछताछ",
+    "subtitle": "अपना नंबर छोड़ें, हम आपको वापस कॉल करेंगे।",
+    "name": "आपका नाम",
+    "namePlaceholder": "जैसे रमेश ट्रेडर्स",
+    "mobile": "मोबाइल नंबर",
+    "mobilePlaceholder": "10 अंकों का मोबाइल",
+    "comment": "टिप्पणी (वैकल्पिक)",
+    "commentPlaceholder": "आप क्या खोज रहे हैं?",
+    "submit": "भेजें",
+    "submitting": "भेजा जा रहा है…",
+    "successTitle": "धन्यवाद!",
+    "successBody": "हम शीघ्र ही आपको कॉल करेंगे।",
+    "errorTitle": "भेजा नहीं जा सका",
+    "errorBody": "सीधे हमसे संपर्क करें:",
+    "errors": {
+      "nameRequired": "कृपया अपना नाम दर्ज करें।",
+      "mobileRequired": "कृपया अपना मोबाइल नंबर दर्ज करें।",
+      "mobileInvalid": "मान्य 10 अंकों का भारतीय मोबाइल नंबर दर्ज करें।",
+      "commentTooLong": "इसे 500 अक्षरों से कम रखें।"
+    }
+  },
   "Channels": {
     "indiamart": "इंडियामार्ट",
     "flipkart": "फ्लिपकार्ट",
